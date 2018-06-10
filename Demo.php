@@ -7,7 +7,7 @@ use Vbot\Blacklist\Blacklist;
 use Vbot\GuessNumber\GuessNumber;
 use Vbot\HotGirl\HotGirl;
 
-class Example
+class Demo
 {
     private $config;
 
@@ -25,14 +25,8 @@ class Example
         $robot = new Bot($this->config); // 初始化容器
 
         // 传入消息处理器
-        $robot->messageHandler->setHandler([MessageHandler::class, 'messageHandler']);
-
-        $robot->messageExtension->load([
-            // some extensions
-            // Blacklist::class,
-            // GuessNumber::class,
-            //HotGirl::class,
-        ]);
+        $robot->messageHandler->setHandler([DemoMessageHandler::class, 'messageHandler']);
+        $robot->messageHandler->setCustomHandler([DemoMessageHandler::class, 'customMessageHandler']);
 
         $robot->observer->setQrCodeObserver([Observer::class, 'setQrCodeObserver']);
 

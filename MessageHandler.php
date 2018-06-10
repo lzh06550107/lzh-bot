@@ -23,13 +23,13 @@ class MessageHandler
     public static function messageHandler(Collection $message)
     {
         /** @var Friends $friends */
-        $friends = vbot('friends');
+        $friends = vbot('friends'); // 好友实例
 
         /** @var Members $members */
-        $members = vbot('members');
+        $members = vbot('members'); // 所有群所有成员实例
 
         /** @var Groups $groups */
-        $groups = vbot('groups');
+        $groups = vbot('groups'); // 群实例
 
         //Hanson::messageHandler($message, $friends, $groups);
         //ColleagueGroup::messageHandler($message, $friends, $groups);
