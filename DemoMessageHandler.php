@@ -20,7 +20,7 @@ use Illuminate\Support\Collection;
 
 class DemoMessageHandler
 {
-    public static function messageHandler(Collection $message)
+    public static function messageHandler(Collection $message) // 这里只有消息参数
     {
         /** @var Friends $friends */
         $friends = vbot('friends'); // 好友实例
@@ -35,8 +35,9 @@ class DemoMessageHandler
 
     }
 
-    public static function customMessageHandler(Collection $message) {
+    public static function customMessageHandler() { // 这里没有参数
         $friends = vbot('friends'); // 好友实例
-        Demo::customMessageHandler($message, $friends);
+        $groups = vbot('groups'); // 群实例
+        Demo::customMessageHandler($friends, $groups);
     }
 }

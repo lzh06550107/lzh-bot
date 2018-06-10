@@ -28,7 +28,7 @@ return [
      */
     'console' => [
         'output'  => true, // 是否输出
-        'message' => true, // 是否输出接收消息 （若上面为 false 此处无效）
+        'message' => false, // 是否输出接收消息 （若上面为 false 此处无效）
     ],
     /*
      * 日志配置项
