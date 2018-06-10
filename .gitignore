@@ -1,5 +1,7 @@
 composer.phar
 /vendor/
+!/vendor/vbot
+!/vendor/hanson
 /.idea
 composer.lock
 

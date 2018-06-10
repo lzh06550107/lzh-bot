@@ -27,10 +27,6 @@ window.QRLogin.code = 200; window.QRLogin.uuid = "xxx"
 ```
 > 注：这里的appid就是在微信开放平台注册的应用的AppID。网页版微信有两个AppID，早期的是`wx782c26e4c19acffb`，在微信客户端上显示为应用名称为`Web微信`；现在用的是`wxeb7ec651dd0aefa9`，显示名称为`微信网页版`。
 
-<div align=center>
-<img src="imgs/8.jpg" width="320" height="211"/>
-</div>
-
 <br>
 
 | API | 绑定登陆（webwxpushloginurl） |
